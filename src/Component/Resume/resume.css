@@ -1,0 +1,119 @@
+.resumeContainer{
+    margin-top: 60px;
+}
+.resumeWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+.resumeDetail {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.resumeTitle{
+    font-size: 22px;
+    font-weight: 800;
+    margin: 30px 0;
+}
+.resumeDetailItems {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.resumeDetailLists {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start; /* Align items from the left */
+}
+
+.resumeDetailList {
+    flex: 0 0 calc(50% - 20px); /* Ensures a fixed width for each item */
+    max-width: calc(50% - 20px); /* Prevents stretching */
+    min-width: calc(50% - 20px); /* Ensures responsiveness */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.resumeDate {
+    background-color: #80db66;
+    border-radius: 5px;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    margin-bottom: 15px;
+}
+
+.resumeDate p {
+    font-size: 13px;
+    color: white;
+}
+
+.resumeDetailList h5 {
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.resumeDetailList span {
+    font-size: 16px;
+}
+
+.resumeDetailList p {
+    font-size: 14px;
+}
+
+.resumeValue{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.resumeValue h5{
+    font-size: 18px;
+    font-weight: 800;
+}
+.resumeValue span{
+    font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .resumeDetailList {
+        flex: 0 0 calc(50% - 20px); /* Slightly smaller width for tablets */
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .resumeDetailLists {
+        justify-content: center; /* Center items on smaller screens */
+    }
+    .resumeDetailList {
+        flex: 0 0 100%; /* Full width on smaller screens */
+        max-width: 100%;
+    }
+}

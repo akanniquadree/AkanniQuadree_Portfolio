@@ -1,0 +1,104 @@
+.aboutContainer{
+    margin-top: 60px;
+}
+.aboutWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+.aboutTitle{
+    position: relative;
+    width: 100%;
+}
+.aboutTitleMark{
+    color: #eee;
+    text-align: center;
+    font-size: 10rem;
+    opacity: 0.5;
+}
+.aboutTitlePara{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.aboutTitleParaH{
+    text-align: center;
+    font-size: 3rem;
+}
+.aboutTitlePara span{
+    display: block;
+    text-align: center;
+    border-bottom: 2px solid red;
+    width: 80px;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+.aboutDetail{
+    flex: 1 1 50%;
+}
+.aboutDetailWrap{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.aboutDetailWrap h3{
+    font-size: 1.5rem;
+}
+.aboutDetailWrap p{
+    font-size: 15px;
+    text-align: justify;
+    margin-bottom: 10px;
+}
+.aboutDetail img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+.css-bbgv0d-MuiStack-root>:not(style)~:not(style) {
+    margin-left: 0 !important;
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .aboutTitleMark {
+        font-size: 8rem; /* Adjust for medium-sized screens */
+    }
+}
+@media (max-width: 768px) {
+    .aboutTitleParaH {
+        font-size: 2rem; /* Smaller font size for smaller screens */
+    }
+    .aboutTitleMark {
+        font-size: 6rem; /* Adjust for smaller screens */
+    }
+    .aboutDetail{
+        flex: 1 1 100%;
+    }
+    .aboutDetailWrap h3{
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutTitleParaH {
+        font-size: 1.13rem; /* Further adjust for mobile devices */
+    }
+    .aboutTitleMark {
+        font-size: 3rem; /* Fixed size for very small screens */
+    }
+    .aboutDetail{
+        flex: 1 1 100%;
+    }
+    .aboutDetailWrap h3{
+        font-size: 0.9rem;
+    }
+}
