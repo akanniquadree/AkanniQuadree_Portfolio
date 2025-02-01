@@ -1,0 +1,71 @@
+.contactContainer {
+    margin-top: 60px;
+}
+
+.contactWrapper {
+    padding: 30px;
+}
+
+.contactStack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
+
+    gap: 20px;
+}
+
+.contactLeft {
+    flex: 1 1 calc(30% - 20px);
+    /* padding: 20px; */
+}
+
+.contactRight {
+    flex: 1 1 calc(70% - 20px);
+    /* padding: 20px; */
+}
+
+.contactSend {
+    font-size: 19px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    /* .contactLeft{
+        flex: 1 1 ;
+    } */
+    
+}
+@media (max-width: 768px) {
+    .contactLeft{
+        flex: 1 1 100%;
+    }
+    .contactRight{
+        flex: 1 1 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactLeft{
+        flex: 1 1 100%;
+    }
+    .contactRight{
+        flex: 1 1 100%;
+    }
+}

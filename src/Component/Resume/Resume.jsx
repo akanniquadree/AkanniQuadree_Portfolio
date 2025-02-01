@@ -162,7 +162,6 @@ export default function Resume() {
                         value={item.garde}
                         sx={{ width: "100%" }}
                       />
-                    
                     </div>
                   ))}
                 </div>
@@ -228,6 +227,12 @@ const Courses = [
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum at consequuntur molestias porro non blanditiis perferendis nihil, impedit suscipit eaque consequatur. Earum, iste quaerat iure repudiandae aut eaque quis dolorum!",
   },
   {
+    school: "Central University of Karnataka",
+    degree: "INTERNSHIP ON GIS TRAINING PROGRAM",
+    date: "2020",
+    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum at consequuntur molestias porro non blanditiis perferendis nihil, impedit suscipit eaque consequatur. Earum, iste quaerat iure repudiandae aut eaque quis dolorum!",
+  },
+  {
     school: "SideHustle., Nigeria",
     degree: "Diploma in Frontend Development (Reactjs)",
     date: "2021",
@@ -248,12 +253,6 @@ const Courses = [
 
   {
     school: "Pantech Solution, India",
-    degree: "INTERNSHIP ON MACHINE LEARNING",
-    date: "2023",
-    desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum at consequuntur molestias porro non blanditiis perferendis nihil, impedit suscipit eaque consequatur. Earum, iste quaerat iure repudiandae aut eaque quis dolorum!",
-  },
-  {
-    school: "Pantech Solution, india",
     degree: "INTERNSHIP ON MACHINE LEARNING",
     date: "2023",
     desc: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum at consequuntur molestias porro non blanditiis perferendis nihil, impedit suscipit eaque consequatur. Earum, iste quaerat iure repudiandae aut eaque quis dolorum!",
