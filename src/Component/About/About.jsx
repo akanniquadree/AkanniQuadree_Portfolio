@@ -72,7 +72,7 @@ export default function About() {
                 ))
               }
               <Divider/>
-              <Button variant="contained" sx={{alignSelf:'center'}}>Download CV</Button>
+              <Button variant="contained" sx={{alignSelf:'center', backgroundColor:'#80db66'}}>Download CV</Button>
             </div>
           </div>
         </Stack>

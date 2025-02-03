@@ -1,0 +1,119 @@
+.workContainer{
+    margin-top: 60px;
+}
+.workWrapper{
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+.workStack{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.workLists{
+    flex: 1 1 calc(33.33% - 20px);
+    padding: 30px;
+    max-width: calc(33.33% - 20px);
+    cursor: pointer;
+    
+}
+
+.workListImage{
+    width: 100%;
+    height: 250px
+    ;overflow: hidden;
+    /* position: relative; */
+
+}
+.workListImage img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+}
+.workListImage:hover img{
+    transform: scale(1.1);
+
+}
+
+.workLists h3{
+margin-top: 20px;
+font-size: 20px;
+}
+
+
+.workLists h3:hover{
+    color: #80db66;
+}
+
+.modalList{
+    flex: 1 1 calc(50% - 20px);
+    /* padding: 30px; */
+    max-width: calc(50% - 20px);
+    
+}
+.modalList img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.modalitem{
+    margin-bottom: 15px;
+}
+.modalitemH{
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+.modalitem p{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1200px) {
+    .workLists{
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+    .modalList{
+        flex: 1 1 calc(100%);
+        max-width: calc(100);
+        
+    }
+}
+@media (max-width: 768px) {
+    .workLists{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .modalList{
+        flex: 1 1 calc(100%);
+        max-width: calc(100);
+        
+    }
+}
+
+@media (max-width: 480px) {
+    .workLists{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .modalList{
+        flex: 1 1 calc(100%);
+        max-width: calc(100);
+        
+    }
+}

@@ -12,6 +12,7 @@ import About from "./Component/About/About";
 import Services from "./Component/Services/Services";
 import Resume from "./Component/Resume/Resume";
 import Contact from "./Component/Contact/Contact";
+import Work from "./Component/Work/Work";
 
 const ScrollToTop = () => {
   const location = useLocation();
@@ -80,7 +81,9 @@ function App() {
       <div ref={resumeRef} id="resume">
         <Resume/>
       </div>
-      <div ref={portRef}></div>
+      <div ref={portRef}>
+        <Work/>
+      </div>
       <div ref={contactRef} id='contact'>
         <Contact/>
       </div>

@@ -27,11 +27,12 @@
 .aboutTitleParaH{
     text-align: center;
     font-size: 3rem;
+    line-height: 1.1;
 }
 .aboutTitlePara span{
     display: block;
     text-align: center;
-    border-bottom: 2px solid red;
+    border-bottom: 2px solid #80db66;
     width: 80px;
     margin-right: auto !important;
     margin-left: auto !important;

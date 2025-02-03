@@ -27,7 +27,7 @@ export default function Slide() {
             
           </h3>
           <span className="slideLoc">Based in Lagos, Nigeria</span>
-          <Button variant="outlined">Hire me</Button>
+          <Button variant="outlined" sx={{color:'inherit', borderColor:'#80db66'}}>Hire me</Button>
         </Stack>
       </div>
     </div>
