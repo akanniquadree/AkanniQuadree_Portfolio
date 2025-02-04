@@ -32,13 +32,21 @@ const style = {
 
 export default function Work() {
   const [open, setOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const handleClose = () => {
     setOpen(false);
   };
-  const handleOpen = () => {
+  const handleOpen = (index) => {
     setOpen(true);
+    setCurrentIndex(index)
   };
+  const handleNext = () =>[
+    setCurrentIndex((prev)=>(prev + 1) % workData.length)
+  ]
+  const handlePrev = () =>[
+    setCurrentIndex((prev)=>(prev - 1 + workData.length) % workData.length)
+  ]
 
   return (
     <div className="workContainer">
@@ -51,16 +59,19 @@ export default function Work() {
           </div>
         </div>
         <div className="workStack">
-          <Paper
-            onClick={() => handleOpen()}
-            className="workLists"
-            elevation={2}
-          >
-            <div className="workListImage">
-              <img src="/Images/intro-bg.jpg" alt="" />
-            </div>
-            <h3>Church Website</h3>
-          </Paper>
+          {workData.map((item, index) => (
+            <Paper
+              onClick={() => handleOpen(index)}
+              className="workLists"
+              elevation={2}
+              key={index}
+            >
+              <div className="workListImage">
+                <img src="/Images/church/03.png" alt="" />
+              </div>
+              <h3>{item.name}</h3>
+            </Paper>
+          ))}
         </div>
       </div>
 
@@ -90,7 +101,7 @@ export default function Work() {
                 marginBottom: "10px",
               }}
             >
-              My Works
+              {workData[currentIndex].name}
             </h3>
             <div className="workStack">
               <div className="modalList">
@@ -100,10 +111,7 @@ export default function Work() {
                 <div className="modalitem">
                   <h5 className="modalitemH">Project Info:</h5>
                   <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Quae magnam eum in impedit hic sapiente enim iure dolore,
-                    placeat, mollitia expedita vero temporibus natus quod odit
-                    perferendis unde non recusandae.
+                  {workData[currentIndex].desc}
                   </p>
                 </div>
                 <div className="modalitem">
@@ -121,7 +129,7 @@ export default function Work() {
                     <Box sx={{ flex: 1 }}>
                       {" "}
                       {/* Takes the remaining space */}
-                      <p>Mr Quadree</p>
+                      <p> {workData[currentIndex].client}</p>
                     </Box>
                   </Stack>
                   <Divider sx={{ marginBottom: "7px" }} />
@@ -138,7 +146,7 @@ export default function Work() {
                     <Box sx={{ flex: 1 }}>
                       {" "}
                       {/* Takes the remaining space */}
-                      <p>Church</p>
+                      <p> {workData[currentIndex].org}</p>
                     </Box>
                   </Stack>
                   <Divider sx={{ marginBottom: "7px" }} />
@@ -156,7 +164,7 @@ export default function Work() {
                     <Box sx={{ flex: 1 }}>
                       {" "}
                       {/* Takes the remaining space */}
-                      <p>Html, css, javaScript</p>
+                      <p> {workData[currentIndex].tech}</p>
                     </Box>
                   </Stack>
                   <Divider sx={{ marginBottom: "7px" }} />
@@ -192,7 +200,7 @@ export default function Work() {
                     <Box sx={{ flex: 1 }}>
                       {" "}
                       {/* Takes the remaining space */}
-                      <p>20 March 2021</p>
+                      <p> {workData[currentIndex].date}</p>
                     </Box>
                   </Stack>
                   <Divider sx={{ marginBottom: "7px" }} />
@@ -202,8 +210,9 @@ export default function Work() {
                     spacing={2}
                     sx={{ marginTop: "2px", alignItems: "center" }}
                   >
-                    <Language/>
-                    <Button sx={{color:'#80db66'}}>View Live</Button>
+                    <Language />
+                    <a href= {workData[currentIndex].link}>
+                    <Button sx={{ color: "#80db66" }}>View Live</Button></a>
                   </Stack>
                   <Divider sx={{ marginBottom: "7px" }} />
 
@@ -213,7 +222,8 @@ export default function Work() {
                     sx={{ marginTop: "2px", alignItems: "center" }}
                   >
                     <GitHub />
-                    <Button sx={{ color: "#80db66" }}>View Source code</Button>
+                    <a href= {workData[currentIndex].code}>
+                    <Button sx={{ color: "#80db66" }}>View Source code</Button></a>
                   </Stack>
                 </div>
               </div>
@@ -232,12 +242,12 @@ export default function Work() {
             }}
           >
             <IconButton
-            // onClick={handlePrev}
+            onClick={handlePrev}
             >
               <ArrowBackIosNewIcon htmlColor="white" />
             </IconButton>
             <IconButton
-            // onClick={handleNext}
+            onClick={handleNext}
             >
               <ArrowForwardIosIcon htmlColor="white" />
             </IconButton>
@@ -248,10 +258,61 @@ export default function Work() {
   );
 }
 
-
-
-const workData  = [
+const workData = [
   {
-
+    name: "The Great Impact Foundation",
+    link: "https://grtimpactfoundation.netlify.app",
+    code: "https://github.com/akanniquadree/ImpactFoundation_Client.git",
+    client: "The Great Impact Foundation",
+    org: "N.G.O",
+    tech: "Reactjs, Material-Ui, Css, Nodejs, MongoDb. ",
+    date: "Sep 21, 2024.",
+    type: "Full Stack Web Development",
+    desc: "",
   },
-]
+  {
+    name: "Mandy Kitchen",
+    link: "https://mandykitchen.netlify.app/",
+    code: "https://github.com/akanniquadree/Restaurant_Management_Client.git",
+    client: "Personal Project",
+    org: "Resturant",
+    tech: "Reactjs, Material-Ui, Css, Nodejs, MongoDb. ",
+    date: "Apr 20, 2024.",
+    type: "Full Stack Web Development",
+    desc: "",
+  },
+  {
+    name: "QuadGram",
+    link: "quadgram.netlify.app",
+    code: "https://github.com/akanniquadree/Quadgram.git",
+    client: "Personal Project",
+    org: "Social Media",
+    tech: "Reactjs, Material-Ui, Css, Nodejs, MongoDb. ",
+    date: "Feb 14, 2022.",
+    type: "Full Stack Web Development",
+    desc: "QuadGram is an imitation of instagram, having all the features of intagram such as like, unlikes, comment, post, follow and unfollow. It is a full stack website (MERN) Stack",
+  },
+  {
+    name: "Facebook Clone",
+    link: "facebuksclone.netlify.app",
+    code: "https://github.com/akanniquadree/Quad_Socail_App.git",
+    client: "Personal Project",
+    org: "Social Media",
+    tech: "Reactjs, Material-Ui, Css. ",
+    date: "Feb 14, 2022.",
+    type: "Frontend Development",
+    desc: "Facebook Clone is an imitation of Facebook, having all the features of intagram such as like, unlikes, comment, post, follow and unfollow. It is a full stack website (MERN) Stack",
+  },
+  {
+    img:'',
+    name: "Church Website",
+    link: "quadweb.netlify.app",
+    code: "https://github.com/akanniquadree/ChurchWebsite.git",
+    client: "Personal Project",
+    org: "Church",
+    tech: "Reactjs, Material-Ui, Css. ",
+    date: "Sep 5, 2022.",
+    type: "Frontend Development",
+    desc: "A classic website design for a church that wants to showcase their activity for their congregrations and others",
+  },
+];
